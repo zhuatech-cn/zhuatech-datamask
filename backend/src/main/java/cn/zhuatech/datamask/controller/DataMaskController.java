@@ -1,0 +1,2 @@
+/* Copyright 2026 上海如静知华信息科技有限公司 */
+package cn.zhuatech.datamask.controller;import cn.zhuatech.datamask.service.DataMaskService;import jakarta.validation.Valid;import org.springframework.web.bind.annotation.*;@RestController @RequestMapping("/api/datamask") @CrossOrigin public class DataMaskController{private final DataMaskService s;public DataMaskController(DataMaskService s){this.s=s;}@PostMapping("/preview") DataMaskService.Result preview(@Valid @RequestBody DataMaskService.Request r){return s.preview(r);}}
