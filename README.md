@@ -15,3 +15,7 @@
 | ![微信一](docs/images/zhuatech-wechat-consulting.png) | ![微信二](docs/images/zhuatech-wechat-consulting-2.png) |
 
 SEO：数据脱敏工具、隐私数据掩码、测试数据、Java 数据安全工具、知华科技。
+
+## 企业级数据脱敏任务发布
+
+新增 `POST /api/enterprise/datamask/masking-job-release`，覆盖访问授权、分类、规则、不可逆性、关联一致性、输出权限、预演和审计，返回 `EXECUTE / PILOT / BLOCKED`。详见 [脱敏发布说明](docs/ENTERPRISE_MASKING_JOB_RELEASE.md)。
