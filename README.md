@@ -9,7 +9,7 @@
 本机演示可直接执行：
 
 ```bash
-docker compose up -d mysql
+docker compose up -d --wait mysql
 cd backend && mvn spring-boot:run
 ```
 
