@@ -105,7 +105,7 @@
 <script>
   run.onclick = async () => {
     try {
-      const r = await fetch("http://localhost:8082/api/datamask/preview", {
+      const r = await fetch("/api/datamask/preview", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
