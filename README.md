@@ -6,7 +6,14 @@
 
 支持姓名、手机号、邮箱、身份证、银行卡和通用文本掩码；接口 `POST /api/datamask/preview` 返回逐字段结果、覆盖率和未支持类型。技术栈为 Java 21、Spring Boot、响应式 H5 与 MySQL。
 
-启动前设置 `MYSQL_PASSWORD` 和 `MYSQL_ROOT_PASSWORD` 环境变量，再执行 `docker compose up -d mysql && cd backend && mvn spring-boot:run`，然后打开 `frontend/index.html`。
+本机演示可直接执行：
+
+```bash
+docker compose up -d mysql
+cd backend && mvn spring-boot:run
+```
+
+然后打开 `frontend/index.html`。MySQL 仅监听 `127.0.0.1:3308`；仓库内默认口令只用于本机演示。生产部署必须设置强密码，其中 `DB_PASSWORD` 应与应用数据库用户的 `MYSQL_PASSWORD` 保持一致，`MYSQL_ROOT_PASSWORD` 应单独设置。
 
 本项目仅供个人学习、研究和非商业交流，**不得商用**。企业内部使用、生产部署、SaaS、客户交付和收费服务须取得上海如静知华信息科技有限公司书面授权，详见 [LICENSE](LICENSE)。深度开发请联系知华科技：
 
